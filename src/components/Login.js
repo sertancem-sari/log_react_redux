@@ -6,9 +6,7 @@ const Login = () => {
       <form className="login-wrap">
 	      <div className="login-html">
 		      <input id='username' type="radio" name="tab" className="sign-in" checked/>
-          <label htmlFor='username' className="tab">GİRİŞ</label>
-		      {/* <input id="tab-2" type="radio" name="tab" className="sign-up"/>
-          <label for="tab-2" className="tab">Sign Up</label> */}
+          <label htmlFor='username' className="welcome-button">KULLANICI GİRİŞİ</label>
           <div className="login-form">
             <div className="sign-in-htm">
               <div className="group">

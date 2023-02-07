@@ -14,6 +14,7 @@ body {
     background-size: cover;
     background-position: top right;
     background-blend-mode: multiply;
+    overflow-y: hidden;
   }
 
 :root {
@@ -82,31 +83,10 @@ section:target h1 {
     animation: 2s fadeIn forwards .5s;
 }
 
-#first {
+#first, #second, #third, #fourth, #fifth {
     display: flex;
     flex-direction: column;
     text-align: left;
-}
-#second {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    
-}
-
-#third {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    
-}
-
-#fourth {
-    
-}
-
-#fifth {
-    
 }
 
 @keyframes fadeIn {
@@ -203,13 +183,14 @@ h1:hover {--_p: 100%}
 }
 .login-html{
 	width:100%;
-	height:100%;
+	height:80%;
 	position:absolute;
 	padding:90px 70px 50px 70px;
 	background:rgba(55, 57, 58, 0.9);
     margin: auto;
     text-align: center;
-    margin-top: 6rem;
+    margin-top: 2rem;
+    
 }
 .login-html .sign-in-htm{
 	top:0;
@@ -239,8 +220,9 @@ h1:hover {--_p: 100%}
 	border-bottom:2px solid transparent;
 }
 .login-html .sign-in:checked + .tab,
-.login-html .sign-up:checked + .tab{
-    padding-top: 3rem;
+.login-html .sign-up:checked + .tab{ 
+    background-color: white;
+    border: 2px solid white;  
 	color:#4ecce2;
 }
 .login-form{
@@ -259,6 +241,7 @@ h1:hover {--_p: 100%}
 	color:#fff;
 	display:block;
     padding-bottom: 1rem;
+    
 }
 .login-form .group .input,
 .login-form .group .button{
@@ -272,8 +255,9 @@ h1:hover {--_p: 100%}
 	-webkit-text-security:circle;
 }
 .login-form .group .label{
-	color:#2ae2e9;
-	font-size:30px;
+    text-align: left;
+	color: #fff;;
+	font-size:20px;
 }
 .login-form .group .button{
 	background:#4ecce2;
@@ -333,3 +317,4 @@ h1:hover {--_p: 100%}
 .foot-lnk{
 	text-align:center;
 }
+

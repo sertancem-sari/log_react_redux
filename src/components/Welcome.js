@@ -44,12 +44,14 @@ const Welcome = () => {
         </section>
   
         <section id= 'third'>
-          <h1>LOGS</h1>
-          <a href='http://localhost:3000/#second' className='welcome-parag'>Sistem loglarına ulaşmak için giriş yapınız...</a>
+          <h1 className='second-head'><span className="welcome-text-second">LOGS</span></h1>
+          <p className='welcome-parag'><a href='http://localhost:3000/#second' className='welcome-parag'>Sistem loglarına ulaşmak için giriş yapınız...</a></p>
         </section>
     
         <section id= 'fourth'>
-          <h1>Fourth</h1>
+        <h1 className='second-head'><span className="welcome-text-second">KAYIT OL</span></h1>
+          <p className='welcome-parag'>Sistem loglarına ulaşmak için KAYIT OL...</p>
+          <Link to='/main/users/new'><button className='welcome-button'>KAYIT OL</button></Link>
         </section>
 
         <section id= 'fifth'>
@@ -62,8 +64,7 @@ const Welcome = () => {
                   <a href="tel:+9002123543000"> (0212) 354 30 00/2062</a>
                   <br />
                   <p>Destek: Sertan Cem SARI</p>
-              </address>
-              
+              </address>  
           </main>
         </section>
       </div>
