@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 const Main = () => {
   const date = new Date()
   const today = new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'long' }).format(date)
+  
   return (
-    <section className="welcome">
-
+          <div className='main'>
             <p>{today}</p>
 
             <h1>Hoşgeldiniz!</h1>
@@ -15,8 +15,9 @@ const Main = () => {
             <p><Link to="/dash/users">Kullanıcı ayarları</Link></p>
 
             <p><Link to="/dash/users/new">Yeni Kullanıcı Ekle</Link></p>
+          </div>
 
-        </section>
+        
   )
 }
 
