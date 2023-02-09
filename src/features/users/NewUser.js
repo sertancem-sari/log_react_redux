@@ -40,7 +40,7 @@ const NewUser = () => {
                 />
               </div>
               <div className="group">
-                <button className='button'>Giriş Yap</button>
+                <button className='button'>KAYDET</button>
               </div>
 			      </div>
 		      </div>

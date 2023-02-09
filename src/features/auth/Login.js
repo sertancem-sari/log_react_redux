@@ -5,16 +5,16 @@ const Login = () => {
     <>
       <form className="login-wrap">
 	      <div className="login-html">
-		      <input id='username' type="radio" name="tab" className="sign-in" checked/>
           <label htmlFor='username' className="welcome-button">KULLANICI GİRİŞİ</label>
+		      <input id='username' type="radio" name="tab" className="sign-in" checked/>
           <div className="login-form">
             <div className="sign-in-htm">
               <div className="group">
-                <label for="user" className="label">Kullanıcı Adı</label>
+                <label htmlFor='user' for="user" className="label">Kullanıcı Adı</label>
                 <input id="user" type="text" className="input"/>
 				      </div>
               <div className="group">
-                <label for="pass" className="label">Parola</label>
+                <label htmlFor='pass' for="pass" className="label">Parola</label>
                 <input id="pass" type="password" className="input" data-type="password"/>
               </div>
               <div className="group">
