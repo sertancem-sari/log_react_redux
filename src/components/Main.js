@@ -6,12 +6,11 @@ import users from '../img/users.png'
 const Main = () => {
   const date = new Date()
   const today = new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'long' }).format(date)
-  
+
   return (
           <div className='welcome'>
-            <p>{today}</p>
-
-            <h1>Hoşgeldiniz!</h1>
+            <h1 className='main-header'>Hoşgeldiniz!</h1>
+            <p className='main-time'>{today}</p>
             <div className='elements'>
               <div className='element'>
                 <img src={log} alt="log img"/>

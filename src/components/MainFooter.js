@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse } from "@fortawesome/free-solid-svg-icons"
+import { faHomeUser} from "@fortawesome/free-solid-svg-icons"
 
 const MainFooter = () => {
   
@@ -17,7 +17,7 @@ const MainFooter = () => {
             title='home'
             onClick={goHome}
         >
-            <FontAwesomeIcon icon={faHouse} />
+            <FontAwesomeIcon icon={faHomeUser} /><FontAwesomeIcon icon="" />
         </button>
     )
   }
