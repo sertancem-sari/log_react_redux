@@ -1,5 +1,6 @@
 import React from 'react'
 import { useGetLogsQuery } from './logsApiSlice'
+import LogsData from './LogsData'
 
 const Logs = () => {
   const{
