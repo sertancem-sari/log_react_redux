@@ -87,7 +87,7 @@ const NewUser = () => {
           <div className="login-form">
             <div className="sign-in-htm">
               <div className="group">
-                <label for="username" className="label">Kullanıcı Adı</label>
+                <label htmlFor="username" className="label">Kullanıcı Adı</label>
                 <input 
                   className={`input ${validUserClass}`}
                   id="username"
@@ -99,7 +99,7 @@ const NewUser = () => {
                 />
 				      </div>
               <div className="group">
-                <label for="password" className="label">Parola</label>
+                <label htmlFor="password" className="label">Parola</label>
                 <input
                   className={`input ${validPwdClass}`}
                   id="password"
@@ -110,7 +110,7 @@ const NewUser = () => {
                 />
               </div>
               <div className="group">
-                <label for="pass" className="label" htmlFor='roles'>ROL</label>
+                <label className="label" htmlFor='roles'>ROL</label>
                 <select
                     id="roles"
                     name="roles"

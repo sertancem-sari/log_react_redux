@@ -1,53 +1,15 @@
-import React from 'react'
+import { useParams } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { selectUserById } from './usersApiSlice'
+import EditUserContent from './EditUserContent'
 
 const EditUser = () => {
-  return (
-    <>
-      <form className="login-wrap">
-	      <div className="login-html">
-		      <input id='username' type="text" name="username" className="sign-in" checked/>
-          <label htmlFor='username' className="welcome-button">KULLANICI AYARLARI</label>
-          <div className="login-form">
-            <div className="sign-in-htm">
-              <div className="group">
-                <label for="username" className="label">Kullanıcı Adı</label>
-                <input 
-                  id="username"
-                  name="username"
-                  type="text"
-                  autoComplete="off"
-                  className="input"
-                />
-				      </div>
-              <div className="group">
-                <label for="password" className="label">Parola</label>
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  className="input" 
-                  data-type="password"
-                />
-              </div>
-              <div className="group">
-                <label for="pass" className="label">ROL</label>
-                <input
-                  id="roles"
-                  name="roles"
-                  multiple={true}
-                  size="3"  
-                  className="input"
-                />
-              </div>
-              <div className="group">
-                <button className='button'>Kaydet</button>
-              </div>
-			      </div>
-		      </div>
-        </div>
-      </form>
-    </>
-  )
-}
+    const { id } = useParams()
 
+    const user = useSelector(state => selectUserById(state, id))
+
+    const content = user ? <EditUserContent user={user} /> : <p>Loading...</p>
+
+    return content
+}
 export default EditUser
