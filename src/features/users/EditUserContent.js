@@ -46,7 +46,7 @@ const EditUserContent = ({ user }) => {
             setUsername('')
             setPassword('')
             setRoles([])
-            navigate('/dash/users')
+            navigate('/main/users')
         }
 
     }, [isSuccess, isDelSuccess, navigate])
@@ -131,7 +131,7 @@ const EditUserContent = ({ user }) => {
                 />
               </div>
               <div className="group">
-                <label htmlFor="users-active" className="label">ROL</label>
+                <label htmlFor="users-active" className="label">AKTİF</label>
                 <input
                   className="input"
                   id="user-active"

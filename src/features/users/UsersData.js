@@ -1,33 +1,37 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { selectUserById } from "./usersApiSlice";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons"
+import { useNavigate } from 'react-router-dom'
 
-import React from 'react'
+import { useSelector } from 'react-redux'
+import { selectUserById } from './usersApiSlice'
 
-const UsersData = ({userId}) => {
+const User = ({ userId }) => {
+    const user = useSelector(state => selectUserById(state, userId))
 
-  const user= useSelector(state => selectUserById(state, userId))
-  const navigate = useNavigate()
+    const navigate = useNavigate()
 
-  if(user){
-    const handleEditUser = () => navigate(`/main/users/${userId}`)
-    const userRolesString = user.roles.toString().replaceAll(',',', ')
-    /* const status = user.active ? '': 'table__cell--inactive' */
+    if (user) {
+        const handleEdit = () => navigate(`/main/users/${userId}`)
 
-    return (
-        <tr className="table__row">
-            <td className="table__cell">{user.username}</td>
-            <td className="table__cell">{userRolesString}</td>
-            <td className="table__cell">
-                <button className="button" onClick={handleEditUser}><FontAwesomeIcon icon={faPenToSquare}/></button>
-            </td>
-        </tr>
-    )
+        const userRolesString = user.roles.toString().replaceAll(',', ', ')
 
-  }else return null
+        const cellStatus = user.active ? '' : 'table__cell--inactive'
 
+        return (
+            <tr className="table__row user">
+                <td className={`table__cell ${cellStatus}`}>{user.username}</td>
+                <td className={`table__cell ${cellStatus}`}>{userRolesString}</td>
+                <td className={`table__cell ${cellStatus}`}>
+                    <button
+                        className="icon-button table__button"
+                        onClick={handleEdit}
+                    >
+                        <FontAwesomeIcon icon={faPenToSquare} />
+                    </button>
+                </td>
+            </tr>
+        )
+
+    } else return null
 }
-
-export default UsersData
+export default User

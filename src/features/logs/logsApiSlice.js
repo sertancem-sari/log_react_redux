@@ -14,7 +14,6 @@ import {
             validateStatus: (response, result) =>{
                 return response.status === 200 && !result.isError
             },
-            keepUnusedDataFor:5,
             transformResponse: responseData =>{
                 const loadedLogs = responseData.map(log =>{
                     log.id = log._id
@@ -40,7 +39,7 @@ import {
 
  export const selecLogsResult= logsApiSlice.endpoints.getLogs.select()
  
- //Noormalized data
+ 
  const selectLogsData= createSelector(
     selecLogsResult,
     logsResult => logsResult.data

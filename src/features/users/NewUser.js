@@ -2,8 +2,6 @@ import React from 'react'
 import { useState, useEffect } from "react"
 import { useAddNewUserMutation } from "./usersApiSlice"
 import { useNavigate } from "react-router-dom"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSave } from "@fortawesome/free-solid-svg-icons"
 import { ROLES } from "../../config/roles"
 
 const USER_REGEX = /^[A-z]{3,20}$/
@@ -39,7 +37,7 @@ const NewUser = () => {
           setUsername('')
           setPassword('')
           setRoles([])
-          navigate('/dash/users')
+          navigate('/main/users')
       }
   }, [isSuccess, navigate])
 
@@ -48,7 +46,7 @@ const NewUser = () => {
 
   const onRolesChanged = e => {
       const values = Array.from(
-          e.target.selectedOptions, //HTMLCollection 
+          e.target.selectedOptions,
           (option) => option.value
       )
       setRoles(values)
@@ -82,8 +80,8 @@ const NewUser = () => {
     <>
       <form className="login-wrap" onSubmit={onSaveUserClicked}>
 	      <div className="login-html">
-		      <input id='username' type="text" name="username" className="sign-in" checked/>
-          <label htmlFor='username' className="welcome-button">YENİ KULLANICI</label>
+		      <input id='newuser' type="text" name="newuser" className="sign-in" />
+          <label htmlFor='newuser' className="welcome-button">YENİ KULLANICI</label>
           <div className="login-form">
             <div className="sign-in-htm">
               <div className="group">
