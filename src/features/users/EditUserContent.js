@@ -122,7 +122,7 @@ const EditUserContent = ({ user }) => {
               <div className="group">
                 <label htmlFor="password" className="label">Parola</label>
                 <input
-                  className={`form__input ${validPwdClass}`}
+                  className={`input ${validPwdClass}`}
                   id="password"
                   name="password"
                   type="password"
@@ -143,7 +143,7 @@ const EditUserContent = ({ user }) => {
               </div>
               <div className="group">
                 <label htmlFor="pass" className="label">ROL</label>
-                <input
+                <select
                   id="roles"
                   name="roles"
                   className={`input ${validRolesClass}`}
@@ -151,24 +151,30 @@ const EditUserContent = ({ user }) => {
                   size="3"
                   value={roles}
                   onChange={onRolesChanged}
-                />
+                >
+                  {options}
+                </select>
               </div>
-              <div className="group">
-                <button
+              <div className='login-wrap'>
+                <div className="group">
+                  <button
                     className="button"
                     title="Save"
                     onClick={onSaveUserClicked}
                     disabled={!canSave}
-                >
-                    <FontAwesomeIcon icon={faSave} />
-                </button>
-                <button
+                  >
+                      <FontAwesomeIcon icon={faSave} />
+                  </button>
+                </div>
+                <div className='group'>
+                  <button
                     className="button"
                     title="Delete"
                     onClick={onDeleteUserClicked}
-                >
-                    <FontAwesomeIcon icon={faTrashCan} />
-                </button>
+                  >
+                      <FontAwesomeIcon icon={faTrashCan} />
+                  </button>
+                </div>
               </div>
             </div>
         </div>
