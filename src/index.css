@@ -555,3 +555,15 @@ tr {
     transition: 0.5s;
     cursor: pointer;
 }
+
+.form__persist {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.5em;
+}
+
+.form__checkbox {
+    width: 24px;
+    height: 24px;
+  }

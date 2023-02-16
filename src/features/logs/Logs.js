@@ -8,7 +8,7 @@ const Logs = () => {
         isSuccess,
         isError,
         error
-    } = useGetLogsQuery(undefined, {
+    } = useGetLogsQuery('logsList', {
         pollingInterval: 15000,
         refetchOnFocus: true,
         refetchOnMountOrArgChange: true

@@ -12,7 +12,7 @@ import Users from './features/users/Users'
 import Welcome from './components/Welcome'
 import {store} from './app/store'
 import { Provider } from 'react-redux'
-
+import PersistLogin from './features/auth/PersistLogin'
 
 const App = () => {
   return (
@@ -22,15 +22,17 @@ const App = () => {
           <Route index element={<Welcome/>}/>
           <Route path='login' element={<Login/>}/>
           <Route path='newuser' element={<NewUser/>}/>
-          <Route element={<Prefetch/>}>
-            <Route path='main' element={<MainLayout/>}>
-              <Route index element={<Main/>}/>
-              <Route path='users'>
-                <Route index element={<Users/>}/>
-                <Route path=':id' element={<EditUser/>}/>
-              </Route>
-              <Route path='logs'>
-                <Route index element={<Logs/>}/>
+          <Route element={<PersistLogin/>}>
+            <Route element={<Prefetch/>}>
+              <Route path='main' element={<MainLayout/>}>
+                <Route index element={<Main/>}/>
+                <Route path='users'>
+                  <Route index element={<Users/>}/>
+                  <Route path=':id' element={<EditUser/>}/>
+                </Route>
+                <Route path='logs'>
+                  <Route index element={<Logs/>}/>
+                </Route>
               </Route>
             </Route>
           </Route>
