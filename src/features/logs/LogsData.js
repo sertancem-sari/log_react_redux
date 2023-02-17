@@ -8,31 +8,12 @@ const LogsData = ({logId}) => {
 
   if (log) {
         return (
-            <table class="container">
-                <thead>
-                    <tr>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                    <th>
-                        <tr> <h1>LOG ALARM</h1></tr>
-                        <tr><td>{log.logs[0]}</td></tr>
-                    </th>
-                    <th>
-                        <tr> <h1>PORT</h1> </tr>
-                        <tr><td>{log.logs[1]}</td></tr>
-                    </th>
-                    <th>
-                        <tr> <h1>AÇIKLAMA</h1> </tr>
-                        <tr><td>{log.logs[2]}</td></tr>
-                    </th>
-                    <th>
-                        <tr> <h1>TARİH</h1></tr>
-                        <tr><td>{log.logs[3]}</td></tr>
-                    </th>            
-                </tbody>
-            </table>
+            <tr className="table__row user">
+                <td className={`table__cell`}>{log.logs[0]}</td>
+                <td className={`table__cell`}>{log.logs[1]}</td>
+                <td className={`table__cell`}>{log.logs[2]}</td>
+                <td className={`table__cell`}>{log.logs[3]}</td>
+            </tr>
         )
     } else return null
 

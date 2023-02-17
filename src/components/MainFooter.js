@@ -3,12 +3,15 @@ import { useNavigate, useLocation, Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHomeUser, faRightFromBracket} from "@fortawesome/free-solid-svg-icons"
 import { useSendLogoutMutation } from '../features/auth/authApiSlice'
+import useAuth from "../hooks/useAuth"
 
 const MAİN_REGEX = /^\/main(\/)?$/
 const LOGS_REGEX = /^\/main\/logs(\/)?$/
 const USERS_REGEX = /^\/main\/users(\/)?$/
 
 const MainFooter = () => {
+
+  const {username, status}= useAuth
   
   const navigate= useNavigate()
   const {pathname}= useLocation()
@@ -60,8 +63,8 @@ const MainFooter = () => {
   return (
     <footer className='main-footer'>
         {homeButton}
-        <p>Mevcut Kullanıcı:</p>
-        <p>Durum:</p>
+        <p>Mevcut Kullanıcı:{username}</p>
+        <p>Durum:{status}</p>
         {logoutButton}
     </footer>
   )

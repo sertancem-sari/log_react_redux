@@ -30,17 +30,19 @@ const Logs = () => {
             : null
 
         content = (
-            <table className="center">
+            <table className="table">
                 <thead className="table__thead">
                     <tr>
-                        <th scope="col" className="table__th log__updated">SİSTEM LOG</th>
+                        <th scope="col" className="edit_table_th">LOG</th>
+                        <th scope="col" className="edit_table_th">PORT</th>
+                        <th scope="col" className="edit_table_th">AÇIKLAMA</th>
+                        <th scope="col" className="edit_table_th">TARİH</th>
                     </tr>
                 </thead>
                 <tbody>
                     {tableContent}
                 </tbody>
             </table>
-            
         )
     }
 

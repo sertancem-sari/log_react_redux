@@ -32,12 +32,12 @@ const Users = () => {
             : null
 
         content = (
-            <table className="table table--users">
+            <table className="table__user">
                 <thead className="table__thead">
                     <tr>
-                        <th scope="col" className="table__th user__username">Username</th>
-                        <th scope="col" className="table__th user__roles">Roles</th>
-                        <th scope="col" className="table__th user__edit">Edit</th>
+                        <th scope="col" className="edit_table_th">Username</th>
+                        <th scope="col" className="edit_table_th">Roles</th>
+                        <th scope="col" className="edit_table_th">Edit</th>
                     </tr>
                 </thead>
                 <tbody>
